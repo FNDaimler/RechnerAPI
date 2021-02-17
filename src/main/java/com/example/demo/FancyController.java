@@ -30,4 +30,12 @@ public class FancyController {
         int ergebnis=zahl1*zahl2;
         return "Das Ergebnis ist " + ergebnis;
     }
+    @GetMapping("/geteilt")
+    public String geteitltfunction(@RequestParam("zahl")float zahl, @RequestParam("zahl0")float zahl0) {
+        if(zahl0==0){
+            return "Man kann nicht durch 0 teilen!";
+            }
+        float ergebnis = zahl/zahl0;
+        return "Das Ergebnis ist " + ergebnis;
+    }
 }
