@@ -25,4 +25,9 @@ public class FancyController {
         int ergebnis=zahl1+zahl2;
             return "Das Ergebnis ist " + ergebnis;
     }
+    @GetMapping("/multiplikation")
+    public String multiplikationfunction(@RequestParam("zahl1")int zahl1, @RequestParam("zahl2")int zahl2){
+        int ergebnis=zahl1*zahl2;
+        return "Das Ergebnis ist " + ergebnis;
+    }
 }
